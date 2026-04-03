@@ -8,7 +8,7 @@ app = FastAPI()
 # returns hello world object when someone vists / endpoint 
 @app.get("/")
 def root():
-    return{"Hello": "World"}
+    return{"API is running"}
 
 
 #Basic health check endpoint 
@@ -19,7 +19,11 @@ async def get_health():
         status_code = 200
     )
 
-    
+#Return message 
+@app.get("/message")
+async def get_message():
+    return {"Hello Dylan"}
+
 
 
 
