@@ -14,10 +14,10 @@ jobs:
         run: docker build . -t dcorr25/fast-api-backend:latest
 
       - name: Login to Dcoker Hub 
-        uses: docker/login-actions@v2
+        uses: docker/login-actions@v3
         with:
              username: ${{ secrets.DOCKERHUB_USERNAME }}
-             password: ${{secrets.DOCKERHUB_TOKEN }}
+             password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: push image to docker hub
         run: docker push dcorr25/fast-api-backend:latest
