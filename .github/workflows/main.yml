@@ -22,5 +22,25 @@ jobs:
       - name: push image to docker hub
         run: docker push dcorr25/fast-api-backend:latest
   
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: eu-west-1
+          aws-access-key-id: ${{ secrets.ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
 
+      - name: Deploy via SSM
+        run: |
+          aws ssm send-command \
+            --instance-ids "${{ secrets.EC2_INSTANCE_ID }}" \
+            --document-name "AWS-RunShellScript" \
+            --comment "Deploy FastAPI container" \
+            --parameters commands='[
+              "sudo docker pull dcorr25/fast-api-backend:latest",
+              "sudo docker stop fast-api || true",
+              "sudo docker rm fast-api || true",
+              "sudo docker run -d --name fast-api -p 8000:8000 dcorr25/fast-api-backend:latest"
+            ]' \
+            --region eu-west-1
+        
       

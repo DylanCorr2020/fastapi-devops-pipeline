@@ -10,6 +10,9 @@ resource "aws_instance" "instance-eu-west-1a" {
 
   # Attach the security group to this instance
   vpc_security_group_ids = [aws_security_group.public_http_traffic.id]
+   
+  #Attach SSM policy 
+  iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   user_data = <<-EOF
 #!/bin/bash
