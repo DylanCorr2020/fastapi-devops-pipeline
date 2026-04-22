@@ -54,7 +54,7 @@ git push → build image → push to Docker Hub → deploy via SSM → app updat
 
 ## 🏗️ Architecture
 
-<img width="1536" height="1024" alt="Image" src="https://github.com/user-attachments/assets/e6136fc9-dd54-4640-8479-c3894877b06c" />
+<img width="100%" height="536" alt="Image" src="https://github.com/user-attachments/assets/e6136fc9-dd54-4640-8479-c3894877b06c" />
 
 ### Flow Explanation:
 
@@ -106,18 +106,6 @@ docker build -t dcorr25/fast-api-backend:latest .
 docker run -d --name fast-api -p 8000:8000 dcorr25/fast-api-backend
 
 ```
-
-## 🔄 CI/CD Pipeline
-
-Implemented using GitHub Actions.
-
-### Pipeline Steps:
-
-- Checkout repository
-- Build Docker image
-- Push image to Docker Hub
-- Authenticate with AWS
-- Deploy via SSM
 
 ## 🔐 Security
 
