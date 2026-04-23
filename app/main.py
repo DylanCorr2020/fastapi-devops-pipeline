@@ -25,6 +25,9 @@ async def get_message():
     return {"Hello Dylan"}
 
 
+@app.get("/fruit")
+async def get_fruit():
+    return {"Hello Bannana"}
 
 
 
