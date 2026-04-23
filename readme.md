@@ -16,14 +16,6 @@ It replaces a manual deployment process with a secure and repeatable CI/CD workf
 
 ## ❗ Problem
 
-Deploying applications manually to cloud infrastructure is time-consuming, error-prone, and not scalable.
-
-Initially, deploying the FastAPI application required:
-
-SSH into EC2 → pull Docker image → stop container → run container
-
-### Challenges:
-
 - Manual and repetitive process
 - Risk of human error
 - Requires SSH access (security concern)
@@ -33,16 +25,6 @@ SSH into EC2 → pull Docker image → stop container → run container
 ---
 
 ## 💡 Solution
-
-This project replaces the manual process with a fully automated CI/CD pipeline.
-
-Using GitHub Actions and AWS Systems Manager (SSM), deployments are triggered automatically on every code push.
-
-### New Deployment Flow:
-
-git push → build image → push to Docker Hub → deploy via SSM → app updated
-
-### Key Improvements:
 
 - Fully automated deployments
 - No SSH access required
