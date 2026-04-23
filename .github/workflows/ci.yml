@@ -1,7 +1,8 @@
-name: Build and Publish image to Docker Hub 
+name: CI
 
 on:
-  workflow_dispatch:
+   push:
+    branches: [ "main" ]
 
 jobs:
   publish_images:
