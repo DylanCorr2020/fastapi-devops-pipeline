@@ -30,6 +30,10 @@ async def demo():
     return {"message": "CI/CD pipeline working"}
 
 
+@app.get("/release")
+def release():
+    return {"message": "new release live"}
+
 
 
 
