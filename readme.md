@@ -6,11 +6,11 @@
 
 video link here
 
+---
+
 ## 📌 Overview
 
-This project demonstrates a fully automated, cloud-native deployment pipeline for a FastAPI backend application.
-
-It replaces a manual deployment process with a secure and repeatable CI/CD workflow using Infrastructure as Code, containerization, and remote command execution.
+Automated CI/CD pipeline for deploying a FastAPI app to AWS EC2 using Terraform, Docker, GitHub Actions, and AWS SSM.
 
 ---
 
@@ -78,32 +78,60 @@ The infrastructure is provisioned using Terraform.
 
 ---
 
-## 🐳 Docker
+## 🚀 How to Deploy
 
-### Build Image
+### 📦 Prerequisites
+
+- Git
+- Docker
+- Terraform
+- AWS CLI (configured with credentials)
+- GitHub account
+- Docker Hub account
+
+---
+
+### 1. Clone the Repository
 
 ```bash
-docker build -t dcorr25/fast-api-backend:latest .
-
-docker run -d --name fast-api -p 8000:8000 dcorr25/fast-api-backend
+git clone git@github.com:DylanCorr2020/fastapi-devops-pipeline.git
+cd  fast-api-devops-pipeline
 
 ```
 
-## 🔐 Security
+### 2. Provision Infrastructure
 
-- No SSH access required
-- Uses IAM roles for EC2 permissions
-- Credentials stored securely using GitHub Secrets
-- Deployment handled via AWS Systems Manager (SSM)
+```bash
+cd terraform
+terraform init
+terrafrom apply
 
-## 🌐 Accessing the Application
+```
+
+### 3. Configure GitHub Secrets
+
+Add the following secrets in your repository:
+
+- DOCKERHUB_USERNAME
+- DOCKERHUB_TOKEN
+- ACCESS_KEY_ID
+- SECRET_ACCESS_KEY
+- EC2_INSTANCE_ID
+
+### 4. Trigger Deployment
+
+```bash
+
+   git push origin main
+
+```
+
+### 5. Accessing the Application
 
 ```
     http://<EC2_PUBLIC_IP>:8000
 ```
 
-## 🧪 How to Deploy
+## Author
 
-```
-     git push origin main
-```
+Dylan Corr
