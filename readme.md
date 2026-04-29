@@ -91,7 +91,7 @@ The infrastructure is provisioned using Terraform.
 
 ---
 
-### 1. Clone the Repository
+### 📥 Clone the Repository
 
 ```bash
 git clone git@github.com:DylanCorr2020/fastapi-devops-pipeline.git
@@ -99,16 +99,16 @@ cd  fast-api-devops-pipeline
 
 ```
 
-### 2. Provision Infrastructure
+### 🏗️ Provision Infrastructure
 
 ```bash
 cd terraform
 terraform init
-terrafrom apply
+terraform apply
 
 ```
 
-### 3. Configure GitHub Secrets
+### 🔐 Configure GitHub Secrets
 
 Add the following secrets in your repository:
 
@@ -118,7 +118,7 @@ Add the following secrets in your repository:
 - SECRET_ACCESS_KEY
 - EC2_INSTANCE_ID
 
-### 4. Trigger Deployment
+### 🚀 Trigger Deployment
 
 ```bash
 
@@ -126,12 +126,12 @@ Add the following secrets in your repository:
 
 ```
 
-### 5. Accessing the Application
+### 🌐 Accessing the Application
 
 ```
     http://<EC2_PUBLIC_IP>:8000
 ```
 
-## Author
+## 👤 Author
 
 Dylan Corr
