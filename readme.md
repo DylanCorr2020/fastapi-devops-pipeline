@@ -36,7 +36,7 @@ Automated CI/CD pipeline for deploying a FastAPI app to AWS EC2 using Terraform,
 
 ## 🏗️ Architecture
 
-<img width="100%" height="536" alt="Image" src="https://github.com/user-attachments/assets/e6136fc9-dd54-4640-8479-c3894877b06c" />
+<img width="1774" height="887" alt="Image" src="https://github.com/user-attachments/assets/32e14f2d-03a9-4f33-b5ea-7cbcb5a93453" />
 
 ### Flow Explanation:
 
