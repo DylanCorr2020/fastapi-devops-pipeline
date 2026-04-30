@@ -29,7 +29,9 @@ async def get_message():
 async def demo():
     return {"message": "CI/CD pipeline working"}
 
-
+@app.get("/version")
+def release():
+    return {"message": "v1"}
 
 
 
