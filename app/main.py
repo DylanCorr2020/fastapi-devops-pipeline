@@ -34,7 +34,9 @@ async def demo():
 def release():
     return {"message": "new release live"}
 
-
+@app.get("/version")
+def release():
+    return {"message": "v2"}
 
 
 
