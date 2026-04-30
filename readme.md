@@ -4,7 +4,7 @@
 
 ## 🎥 Demo
 
-video link here
+[![Watch Demo](https://cdn.loom.com/sessions/thumbnails/fd7d4a86a0904ed6a445dc930ad08170-with-play.gif)](https://www.loom.com/share/fd7d4a86a0904ed6a445dc930ad08170)
 
 ---
 
